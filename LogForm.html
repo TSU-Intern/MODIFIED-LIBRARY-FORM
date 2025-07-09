@@ -42,6 +42,14 @@
         .header-container img {
             width: 42px;
             height: 42px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .header-container a:hover img {
+            transform: scale(1.1) rotate(5deg);
+            filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.3));
         }
 
         .header-container span {
@@ -155,6 +163,12 @@
             text-align: center;
             font-size: 14px;
             border: 1px solid #ddd;
+        }
+
+        .select-column {
+            width: 30px;
+            min-width: 30px;
+
         }
 
         th {
@@ -323,7 +337,7 @@
 
 <body>
     <div class="header-container">
-        <img src="ecclogo.png" alt="ECC Logo">
+        <a href="frontpage.html"> <img src="ecclogo.png" alt="ECC Logo"> </a>
         <span><b>ECUMENICAL CHRISTIAN COLLEGE</b></span>
         <nav>
             <a href="LogForm.html">LOG FORM</a>
@@ -331,6 +345,10 @@
             <a href="BorrowersForm.html">BORROWERS FORM</a>
         </nav>
     </div>
+
+
+
+
     <div class="container">
         <div class="header">ECC LIBRARY TIME LOG FORM</div>
         <div class="reminder">
@@ -370,7 +388,7 @@
         <table id="entriesTable">
             <thead>
                 <tr>
-                    <th>Select</th>
+                    <th class="select-column">Select</th>
                     <th>#</th>
                     <th>Date</th>
                     <th>Name</th>
